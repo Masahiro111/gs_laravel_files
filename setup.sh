@@ -5,9 +5,9 @@ echo "[hint] インストール前に git の設定を行います"
 echo "[hint] 登録した「名前」及び「メールアドレス」はコミット履歴に登録されます"
 echo "[hint] （GitHub にプッシュした際、登録した「名前」や「メールアドレス」を閲覧できるので注意して登録してください）"
 echo ""
-echo "gitに登録するお名前を入力（例：usagi）："
+echo "gitに登録するお名前を入力（例：usagi）"
 read username
-echo "gitに登録するメールアドレスを入力(例：usagi@example.com)："
+echo "gitに登録するメールアドレスを入力（例：usagi@example.com）"
 read useremail
 git config --global init.defaultBranch main
 git config --global user.name "$username"
