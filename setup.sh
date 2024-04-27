@@ -5,9 +5,9 @@ echo "[hint] インストール前に git の設定を行います"
 echo "[hint] 登録した「名前」及び「メールアドレス」はコミット履歴に登録されます"
 echo "[hint] （GitHub にプッシュした際、登録した「名前」や「メールアドレス」を閲覧できるので注意して登録してください）"
 echo ""
-echo "gitに登録するお名前を入力してください："
+echo "gitに登録するお名前を入力（例：usagi）："
 read username
-echo "gitに登録するメールアドレスを入力してください："
+echo "gitに登録するメールアドレスを入力(例：usagi@example.com)："
 read useremail
 git config --global init.defaultBranch main
 git config --global user.name "$username"
@@ -109,6 +109,9 @@ wget https://files.phpmyadmin.net/phpMyAdmin/5.1.2/phpMyAdmin-5.1.2-all-language
 echo  "\n 17-4. phpMyAdminを解凍\n "
 unzip phpMyAdmin-5.1.2-all-languages.zip
 
+echo  "\n zipファイルの削除\n "
+rm phpMyAdmin-5.1.2-all-languages.zip
+
 echo  "\n 17-5. phpMyAdminのファイル名変更\n "
 mv phpMyAdmin-5.1.2-all-languages phpMyAdmin
 
@@ -117,9 +120,6 @@ cd ..
 
 echo  "\n 17-7. 親階層に戻る\n "
 cd ..
-
-echo  "\n 17-7. セットアップファイルの削除\n "
-rm setup.sh
 
 echo "MySQLにログインしてデータベースの作成"
 mysql -u root -proot << EOF
@@ -183,3 +183,10 @@ echo "ここから公開鍵をコピー -----------------------"
 cat ~/.ssh/id_rsa.pub
 echo "ここまで公開鍵をコピー -----------------------"
 echo ""
+echo "MariaDB の設定 -----------------------"
+echo "ユーザー名： root"
+echo "パスワード： root"
+echo ""
+echo "「あなたのドメイン/phpMyAdmin/index.php」にブラウザからアクセスしてphpMyAdmin を操作できます"
+echo "「cd cms」コマンドを実行してから「php artisan serve --port=8080」を実行すると簡易サーバーが立ち上がります"
+echo "--------------------------------------"
