@@ -141,7 +141,7 @@ sed -i "23i\URL::forceScheme('https');" "app/Providers/AppServiceProvider.php"
 echo "Laravel Breeze のインストール"
 composer require laravel/breeze --dev
 
-php artisan breeze:install -- blade
+php artisan breeze:install -- blade --dark
 
 echo "マイグレーション処理"
 php artisan migrate
