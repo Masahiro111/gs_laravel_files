@@ -6,7 +6,7 @@ Cloud9 で Laravel10 を自動セットアップするスクリプトを使用�
 
 ![image](./images/select-amazon-linux-2.jpg)
 
-Cloud9 の環境を作成した後に、Cloud9 の IDE を立ち上げてコンソールに「~/environment $」という表示になっていることを確認してください。以下のコマンドをコピーして、そのままコンソールに貼り付けしてエンターキーを押してください。
+Cloud9 の環境を作成した後に、Cloud9 の IDE を立ち上げてターミナルが「~/environment $」という表示になっていることを確認してください。以下のコマンドをコピーして、そのままターミナルに貼り付けしてエンターキーを押してください。
 
 ```command
 sh -c "$(curl -sS https://raw.githubusercontent.com/Masahiro111/gs_laravel_files/main/cloud9_laravel10_setup.sh/setup.sh)"
