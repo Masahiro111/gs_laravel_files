@@ -12,7 +12,7 @@ Cloud9 の環境を作成した後に、Cloud9 の IDE を立ち上げてコン�
 sh -c "$(curl -sS https://raw.githubusercontent.com/Masahiro111/gs_laravel_files/main/cloud9_laravel10_setup.sh/setup.sh)"
 ```
 
-すると以下の画像のような画面がされます。Git の設定で名前とメールアドレスの入力をしてください。すると自動的に Laravel 10 のインストールを開始します。
+すると以下の画像のような画面がされます。Git の設定で「名前」を入力してエンター、続けてメールアドレスの入力をエンターを押してください。自動的に Laravel 10 のインストールを開始されます。
 
 ![image](./images/console-test.png)
 
