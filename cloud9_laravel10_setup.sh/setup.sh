@@ -86,7 +86,7 @@ sudo systemctl enable mariadb
 sudo systemctl is-enabled mariadb
 
 echo  "\n 15-1. Composerインストール（バージョン指定）しました\n "
-curl -sS https://getcomposer.org/installer | php -- --version=2.6.5
+curl -sS https://getcomposer.org/installer | php
 
 echo  "\n 15-2. Composerのパスを通しました\n "
 sudo mv composer.phar /usr/bin/composer
