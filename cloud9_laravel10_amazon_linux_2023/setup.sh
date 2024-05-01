@@ -5,29 +5,8 @@ sudo yum list installed | grep mariadb
 
 echo "Apache, MariaDBの起動"
 sudo systemctl start mariadb
-# !/bin/sh
-expect -c '
-    set timeout 1;
-    spawn sudo mysql_secure_installation
-    expect "Enter current password for root (enter for none):";
-    send "\n";
-    expect "Switch to unix_socket authentication";
-    send "y\n";
-    expect "Change the root password?";
-    send "y\n";
-    expect "New password:";
-    send "root\n";
-    expect "Re-enter new password:";
-    send "root\n";
-    expect "Remove anonymous users?";
-    send "y\n";
-    expect "Disallow root login remotely?";
-    send "y\n";
-    expect "Remove test database and access to it?";
-    send "y\n";
-    expect "Reload privilege tables now?";
-    send "y\n";
-    interact;'
+sudo mysql
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
 
 echo "MaridaDBの自動起動を有効化"
 sudo systemctl enable mariadb
