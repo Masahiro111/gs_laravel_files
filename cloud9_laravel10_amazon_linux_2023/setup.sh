@@ -5,6 +5,7 @@ sudo yum list installed | grep mariadb
 
 echo "Apache, MariaDBの起動"
 sudo systemctl start mariadb
+# !/bin/sh
 expect -c '
     set timeout 1;
     spawn sudo mysql_secure_installation
