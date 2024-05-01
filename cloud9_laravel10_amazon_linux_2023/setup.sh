@@ -13,7 +13,7 @@ expect -c '
     send "\n";
     expect "Switch to unix_socket authentication";
     send "y\n";
-    expect "Change the root password";
+    expect "Change the root password?";
     send "y\n";
     expect "New password:";
     send "root\n";
