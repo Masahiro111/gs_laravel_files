@@ -5,9 +5,7 @@ sudo yum list installed | grep mariadb
 
 echo "Apache, MariaDBの起動"
 sudo systemctl start mariadb
-sudo mysql
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
-exit;
+sudo mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';"
 
 echo "MaridaDBの自動起動を有効化"
 sudo systemctl enable mariadb
