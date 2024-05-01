@@ -7,6 +7,13 @@ echo "Apache, MariaDBの起動"
 sudo systemctl start mariadb
 sudo mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';"
 
+echo "MySQLにログインしてデータベースの作成"
+mysql -u root -proot << EOF
+create database c9;
+show databases;
+exit
+EOF
+
 echo "MaridaDBの自動起動を有効化"
 sudo systemctl enable mariadb
 sudo systemctl is-enabled mariadb
