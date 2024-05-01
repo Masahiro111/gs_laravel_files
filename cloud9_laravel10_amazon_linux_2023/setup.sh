@@ -7,6 +7,7 @@ echo "Apache, MariaDBの起動"
 sudo systemctl start mariadb
 sudo mysql
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
+exit;
 
 echo "MaridaDBの自動起動を有効化"
 sudo systemctl enable mariadb
